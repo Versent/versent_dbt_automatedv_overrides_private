@@ -16,3 +16,6 @@ target-path: "target"
 clean-targets:
   - "target"
   - "dbt_packages"
+
+vars:
+  bk_ghost: ghost
