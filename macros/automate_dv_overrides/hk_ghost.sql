@@ -6,5 +6,5 @@ coalesce (
 {%- endmacro %}
 
 {% macro hk_ghost_default()%}
-cast('{{ var('bk_ghost') }}' as binary) 
+CAST((MD5_BINARY(NULLIF(UPPER(TRIM(CAST('{{ var('bk_ghost') }}' AS VARCHAR))), ''))) AS BINARY(16))
 {%- endmacro %}

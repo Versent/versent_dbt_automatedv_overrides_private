@@ -15,7 +15,7 @@ with
     {{sat}}_as_of_date as (
         select 
             {{ satellites[sat]['pk'] }},
-            load_datetime as as_of_date
+            {{ satellites[sat]['ldts'] }} as as_of_date
         from 
             {{ ref(sat)}}
     ),
@@ -64,13 +64,16 @@ with
             {{ satellites[sat]['ldts'] }},
             CASE 
                 WHEN ROW_NUMBER() OVER (PARTITION BY {{hash_key}} ORDER BY {{ satellites[sat]['ldts'] }}) = 1 
-                THEN TIMESTAMP('1900-01-01 00:00:00')
+                THEN TO_TIMESTAMP('1900-01-01 00:00:00')
                 ELSE {{ satellites[sat]['ldts'] }}
             END AS effective_from,
-            LEAD({{ satellites[sat]['ldts'] }}, 1, TIMESTAMP('2999-01-01 00:00:01')) OVER (
+            DATEADD(
+            'millisecond', -1,
+            LEAD({{ satellites[sat]['ldts'] }}, 1, TO_TIMESTAMP('2999-01-01 00:00:01')) OVER (
                 PARTITION BY {{hash_key}}
                 ORDER BY {{ satellites[sat]['ldts'] }}
-            ) - INTERVAL 1 MILLISECOND AS effective_to
+            )
+            ) AS effective_to
         FROM
             {{ ref(sat)}}
     ),
@@ -125,4 +128,3 @@ select
 from
     final
 {%- endmacro %}
-
