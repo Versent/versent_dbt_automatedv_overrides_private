@@ -1,0 +1,19 @@
+name: versent_dbt_automatedv_overrides_private
+version: '1.0.0'
+description: "This repository contains custom dbt macros that override and extend functionalities from the automate_dv package."
+config-version: 2
+require-dbt-version: ['>=1.0.1', '<2.0.0']
+
+# Paths
+macro-paths: ["macros"]
+model-paths: ["models"]        # keep if you have any models; otherwise you can set []
+analysis-paths: ["analysis"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+snapshot-paths: ["snapshots"]
+
+# Build artifacts / cleanup
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
