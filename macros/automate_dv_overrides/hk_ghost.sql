@@ -6,5 +6,5 @@ coalesce (
 {%- endmacro %}
 
 {% macro hk_ghost_default()%}
-cast('{{ var('bk_ghost') }}' as binary) 
+    {{ automate_dv.hash("'ghost'", 'hk_ghost')}}
 {%- endmacro %}
