@@ -3,7 +3,8 @@
 -- This macro captures all historical "as-of" dates for records from satellite tables
 
 {{ config(
-    materialized='table'
+    materialized='table', 
+    enabled  = false  -- Set to true to enable this model
 ) }}
 
 -- YAML template configuration for pit_as_of_date macro

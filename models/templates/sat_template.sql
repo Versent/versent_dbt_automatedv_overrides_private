@@ -4,7 +4,8 @@
 
 {{ config(
     materialized='incremental',
-    unique_key='h_customer'
+    unique_key='h_customer',
+    enabled  = false  -- Set to true to enable this model
 ) }}
 
 -- YAML template configuration for SAT macro

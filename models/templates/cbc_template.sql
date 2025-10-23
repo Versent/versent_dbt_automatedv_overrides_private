@@ -3,7 +3,8 @@
 -- The cbc macro brings together hubs, pits and satellites to create a consolidated model
 
 {{ config(
-    materialized='table'
+    materialized='table', 
+    enabled  = false  -- Set to true to enable this model
 ) }}
 
 -- YAML template configuration for CBC macro

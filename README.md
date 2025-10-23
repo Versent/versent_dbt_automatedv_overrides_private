@@ -107,7 +107,8 @@ vars:
 1. Browse the templates in `models/templates/` to understand usage patterns
 2. Copy relevant templates to your project
 3. Modify configurations to match your data sources
-4. Implement the data vault patterns using the override macros
+4. Delete the config varaible "enabled = False"
+5. Implement the data vault patterns using the override macros
 
 ## Configuration
 

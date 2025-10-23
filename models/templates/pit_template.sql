@@ -3,7 +3,8 @@
 -- The pit macro identifies relevant records from satellites for specific dates/timestamps
 
 {{ config(
-    materialized='table'
+    materialized='table',
+    enabled  = false  -- Set to true to enable this model
 ) }}
 
 -- YAML template configuration for PIT macro
