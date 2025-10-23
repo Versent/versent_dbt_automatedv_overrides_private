@@ -31,7 +31,7 @@ with
                     {{ satellites[sat]['ldts'] }},
                     -- payload
                     {% set sat_payload = satellites[sat]['payload'] %}
-                        {{ mac_payload(sat_payload)}}
+                        {{ versent_dbt_automatedv_overrides_private.mac_payload(sat_payload)}}
                 from 
                     {{ ref(sat)}}
             ), 
@@ -41,7 +41,7 @@ with
                 select
                     {{ lookups[lookup]['bk'] ~ ' as bk_' ~ lookup}},
                     {% set sat_payload = lookups[lookup]['payload'] %}
-                    {{ mac_payload(sat_payload)}}
+                    {{ versent_dbt_automatedv_overrides_private.mac_payload(sat_payload)}}
                 from
                     {{ ref(lookup)}}
             ),
@@ -75,11 +75,11 @@ with
             {%- for sat in satellites %}    
             -- {{sat}}
                 {% set sat_payload = satellites[sat]['payload'] %}
-                {{ mac_payload_cols(sat_payload)}}
+                {{ versent_dbt_automatedv_overrides_private.mac_payload_cols(sat_payload)}}
                 {%- set lookups = satellites[sat]['lookups'] %}
                 {%- for lookup in lookups %}
                     {% set lookup_payload = lookups[lookup]['payload'] %}
-                    {{ mac_payload_cols(lookup_payload)}}
+                    {{ versent_dbt_automatedv_overrides_private.mac_payload_cols(lookup_payload)}}
                 {%- endfor %}
             {%- endfor %}  
             current_timestamp() as load_datetime,
@@ -102,7 +102,7 @@ with
     derivations as (
         select
             {% set derivation_payload = derivations %}
-            {{ mac_payload(derivation_payload)}}{%if derivation_payload is defined and derivation_payload is not none%},{%endif%}                 
+            {{ versent_dbt_automatedv_overrides_private.mac_payload(derivation_payload)}}{%if derivation_payload is defined and derivation_payload is not none%},{%endif%}                 
             * 
         from
             get_sats
@@ -118,20 +118,4 @@ select
     *
 from
     final 
-{%- endmacro %}
-
-{%- macro mac_payload(
-    pPayload
-) -%}
-    {%- for col in pPayload %}
-        {%- set derivation = pPayload[col] %}
-        {{ derivation ~ " as " ~ col if derivation is not none else col}}{%- if not loop.last %},{% endif -%}
-    {%- endfor %}
-{%- endmacro %}
-{%- macro mac_payload_cols(
-    pPayload
-) -%}
-    {%- for col in pPayload %}
-        {{ col}},
-    {%- endfor %}
 {%- endmacro %}
