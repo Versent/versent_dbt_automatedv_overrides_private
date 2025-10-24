@@ -4,7 +4,7 @@
 
 {{ config(
     materialized='table',
-    enabled=false  -- Set to true to enable this model
+    enabled=false
 ) }}
 
 -- YAML template configuration for pit_as_of_date macro
