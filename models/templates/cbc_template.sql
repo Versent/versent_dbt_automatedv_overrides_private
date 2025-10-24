@@ -5,7 +5,7 @@
 
 {{ config(
     materialized='table',
-    enabled=false  
+    enabled=false
 ) }}
 
 -- YAML template configuration for CBC macro
@@ -21,19 +21,23 @@ cbc_config:
     sat_customer_details:
       pk: "hk_customer"
       ldts: "load_datetime"
-      columns:
+      pit_ldts: "ldts_sat_customer_details"   
+      payload:
         - "customer_name"
         - "email"
         - "phone"
+      lookups: {}
     sat_customer_address:
       pk: "hk_customer"
       ldts: "load_datetime"
-      columns:
+      pit_ldts: "ldts_sat_customer_address"
+      payload:
         - "address_line1"
         - "address_line2"
         - "city"
         - "state"
         - "postal_code"
+      lookups: {}
   derivations:
     full_name: "CONCAT(first_name, ' ', last_name)"
 {%- endset -%}

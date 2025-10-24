@@ -11,9 +11,15 @@
 {%- set yaml_template -%}
 pit_as_of_date_config:
   satellites:
-    - "sat_customer_details"
-    - "sat_customer_address" 
-    - "sat_customer_preferences"
+    sat_customer_details:
+      pk: "hk_customer"
+      as_of_date: "load_datetime"
+    sat_customer_address:
+      pk: "hk_customer" 
+      as_of_date: "load_datetime"
+    sat_customer_preferences:
+      pk: "hk_customer"
+      as_of_date: "load_datetime"
 {%- endset -%}
 
 {%- set config_data = fromyaml(yaml_template) -%}
