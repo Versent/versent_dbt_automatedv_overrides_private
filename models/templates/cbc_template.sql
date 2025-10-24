@@ -1,10 +1,11 @@
 -- Core Business Concept (CBC) Template
 -- This template demonstrates how to use the custom cbc macro
 -- The cbc macro brings together hubs, pits and satellites to create a consolidated model
+-- Set to true to enable this model
 
 {{ config(
-    materialized='table', 
-    enabled  = false  -- Set to true to enable this model
+    materialized='table',
+    enabled=false  
 ) }}
 
 -- YAML template configuration for CBC macro

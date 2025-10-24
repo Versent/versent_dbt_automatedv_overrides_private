@@ -4,8 +4,8 @@
 
 {{ config(
     materialized='incremental',
-    unique_key='hk_customer', 
-    enabled  = false  -- Set to true to enable this model
+    unique_key='hk_customer',
+    enabled=false  -- Set to true to enable this model
 ) }}
 
 -- YAML template configuration for HUB macro
