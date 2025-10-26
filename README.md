@@ -48,7 +48,7 @@ macros/
 │   ├── mac_payload.sql      # Payload transformation macro
 │   ├── mac_payload_cols.sql # Payload column list macro
 │   └── int.sql              # Integration layer macro
-│models/
+│docs/
 └── templates/               # Usage templates and examples
     ├── cbc_template.sql
     ├── hub_template.sql
@@ -59,7 +59,7 @@ macros/
 
 ## 📚 Usage Templates
 
-The `models/templates/` directory contains comprehensive usage examples for each macro, featuring:
+The `docs/templates/` directory contains comprehensive usage examples for each macro, featuring:
 
 - **YAML-based Configuration**: Structured parameter definitions using `set yaml_template` approach
 - **Practical Examples**: Real-world usage scenarios with sample data
@@ -104,7 +104,7 @@ vars:
 ```
 
 ### Quick Start
-1. Browse the templates in `models/templates/` to understand usage patterns
+1. Browse the templates in `docs/templates/` to understand usage patterns
 2. Copy relevant templates to your project
 3. Modify configurations to match your data sources
 4. Delete the config varaible "enabled = False"
