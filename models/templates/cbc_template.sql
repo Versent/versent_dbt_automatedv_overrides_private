@@ -8,14 +8,13 @@
     enabled=false
 ) }}
 
--- YAML template configuration for CBC macr0
 {%- set yaml_template -%}
 cbc_config:
   hash_key: "hk_customer"
   hub: "hub_customer"
   pit: "pit_customer"
 
-  satellites:                      # <- DICT, no hyphens
+  satellites:                    
     sat_customer_details:
       pk: "hk_customer"
       ldts: "load_datetime"
@@ -37,13 +36,13 @@ cbc_config:
         - "postal_code"
       lookups: {}
 
-  derivations:                     # your macro calls mac_payload() → expects a LIST
+  derivations:                    
     - "CONCAT(first_name, ' ', last_name) AS full_name"
 {%- endset -%}
 
 {%- set config_data = fromyaml(yaml_template) -%}
 
--- Example usage of the cbc macro
+
 {{ cbc(
     hash_key=config_data.cbc_config.hash_key,
     hub=config_data.cbc_config.hub,

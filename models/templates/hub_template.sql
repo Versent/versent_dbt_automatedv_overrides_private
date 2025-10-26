@@ -13,10 +13,10 @@
 hub_config:
   src_pk: "hk_customer"
   src_nk: "customer_id"
-  src_extra_columns: []  # Optional extra columns
   src_ldts: "load_datetime"
   src_source: "record_source"
-  source_model: "staging_customer_raw"
+  source_model: 
+    - "staging_customer_raw"
 {%- endset -%}
 
 {%- set config_data = fromyaml(yaml_template) -%}
@@ -28,7 +28,7 @@ hub_config:
     src_extra_columns=config_data.hub_config.src_extra_columns,
     src_ldts=config_data.hub_config.src_ldts,
     src_source=config_data.hub_config.src_source,
-    source_model=ref(config_data.hub_config.source_model)
+    source_model=config_data.hub_config.source_model
 ) }}
 
 -- Key differences from standard automate_dv hub macro:

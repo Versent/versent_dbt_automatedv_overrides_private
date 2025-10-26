@@ -37,7 +37,7 @@ sat_config:
     src_eff=config_data.sat_config.src_eff,
     src_ldts=config_data.sat_config.src_ldts,
     src_source=config_data.sat_config.src_source,
-    source_model=ref(config_data.sat_config.source_model)
+    source_model=config_data.sat_config.source_model
 ) }}
 
 -- Key differences from standard automate_dv sat macro:
