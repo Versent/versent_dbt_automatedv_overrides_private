@@ -32,7 +32,7 @@ with
                     -- payload
                     {% set sat_payload = satellites[sat]['payload'] %}
                     {% if sat_payload %}  
-                        ,{{ versent_dbt_automatedv_overrides_private.mac_payload(sat_payload)}}
+                        {{ versent_dbt_automatedv_overrides_private.mac_payload(sat_payload)}}
                     {% endif %}
                 from 
                     {{ ref(sat)}}
