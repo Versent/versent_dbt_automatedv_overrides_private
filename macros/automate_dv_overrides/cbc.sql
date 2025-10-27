@@ -25,39 +25,40 @@ with
     {%- for sat in satellites %}
     {{sat}} as (
         with
-            {{ sat }} as (
+            {{ sat }}_data as (  
                 select 
                     {{ satellites[sat]['pk'] }},
                     {{ satellites[sat]['ldts'] }},
                     -- payload
                     {% set sat_payload = satellites[sat]['payload'] %}
-                        {{ versent_dbt_automatedv_overrides_private.mac_payload(sat_payload)}}
+                    {% if sat_payload %}  
+                        ,{{ versent_dbt_automatedv_overrides_private.mac_payload(sat_payload)}}
+                    {% endif %}
                 from 
                     {{ ref(sat)}}
-            ), 
-            {%- set lookups = satellites[sat]['lookups'] %}
+            )
+            {%- set lookups = satellites[sat].get('lookups', {}) %} 
             {%- for lookup in lookups %}
-            {{ lookup}} as (
+            ,{{ lookup}} as (  
                 select
                     {{ lookups[lookup]['bk'] ~ ' as bk_' ~ lookup}},
-                    {% set sat_payload = lookups[lookup]['payload'] %}
-                    {{ versent_dbt_automatedv_overrides_private.mac_payload(sat_payload)}}
+                    {% set lookup_payload = lookups[lookup]['payload'] %}
+                    {{ versent_dbt_automatedv_overrides_private.mac_payload(lookup_payload)}}
                 from
                     {{ ref(lookup)}}
-            ),
-                --{{ lookup_table}}
+            )
             {%- endfor %}
-            final as (
+            ,final as (  
                 select 
                     *
                 from 
-                    {{ sat }}
-                        {%- set lookups = satellites[sat]['lookups'] %}
+                    {{ sat }}_data  
+                        {%- set lookups = satellites[sat].get('lookups', {}) %}
                         {%- for lookup in lookups %}
                         left join
                         {{ lookup}} 
                             on
-                                {{sat}}.{{ lookups[lookup]['sat_bk'] if 'sat_bk' in lookups[lookup] else lookups[lookup]['bk'] }} = {{ 'bk_' ~ lookup }}
+                                {{sat}}_data.{{ lookups[lookup]['sat_bk'] if 'sat_bk' in lookups[lookup] else lookups[lookup]['bk'] }} = {{ 'bk_' ~ lookup }}
                         {%- endfor %}
             )
 
@@ -65,25 +66,27 @@ with
                 *
             from 
                 final
-    ),
+    )
+    {%- if not loop.last %},{% endif %}  
     {%- endfor %}
-    get_sats as (
+    ,get_sats as ( 
         select 
             hub.{{hash_key}},
             hub.{{hub_bkey}},
-            pit.as_of_date,
+            pit.as_of_date
             {%- for sat in satellites %}    
-            -- {{sat}}
                 {% set sat_payload = satellites[sat]['payload'] %}
-                {{ versent_dbt_automatedv_overrides_private.mac_payload_cols(sat_payload)}}
-                {%- set lookups = satellites[sat]['lookups'] %}
+                {% if sat_payload %}
+                ,{{ versent_dbt_automatedv_overrides_private.mac_payload(sat_payload)}}
+                {% endif %}
+                {%- set lookups = satellites[sat].get('lookups', {}) %}
                 {%- for lookup in lookups %}
                     {% set lookup_payload = lookups[lookup]['payload'] %}
-                    {{ versent_dbt_automatedv_overrides_private.mac_payload_cols(lookup_payload)}}
+                    ,{{ versent_dbt_automatedv_overrides_private.mac_payload(lookup_payload)}}
                 {%- endfor %}
             {%- endfor %}  
-            current_timestamp() as load_datetime,
-            hub.record_source    
+            ,current_timestamp() as load_datetime
+            ,hub.record_source    
         from
             hub
             join 
@@ -95,24 +98,24 @@ with
                     left join
                         {{sat}}
                             on
-                                pit.{{hash_key}} = {{sat}}.{{hash_key}} and
+                                pit.{{hash_key}} = {{sat}}.{{satellites[sat]['pk']}} and  
                                 pit.{{satellites[sat]['pit_ldts']}} = {{sat}}.{{satellites[sat]['ldts']}}
                     {%- endfor %}
-    ),
-    derivations as (
+    )
+    {%- if derivations %} 
+    ,derivations as (
         select
-            {% set derivation_payload = derivations %}
-            {{ versent_dbt_automatedv_overrides_private.mac_payload(derivation_payload)}}{%if derivation_payload is defined and derivation_payload is not none%},{%endif%}                 
+            {{ versent_dbt_automatedv_overrides_private.mac_payload(derivations)}},                 
             * 
         from
             get_sats
-
-    ),
-    final as (
+    )
+    {%- endif %}
+    ,final as (
         select
             *
         from
-            derivations
+            {% if derivations %}derivations{% else %}get_sats{% endif %}
     )
 select
     *
