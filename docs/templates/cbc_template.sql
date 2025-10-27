@@ -11,6 +11,7 @@
 {%- set yaml_template -%}
 cbc_config:
   hash_key: "hk_customer"
+  hub_bkey: "customer_bk"
   hub: "hub_customer"
   pit: "pit_customer"
 
@@ -46,6 +47,7 @@ cbc_config:
 {{ cbc(
     hash_key=config_data.cbc_config.hash_key,
     hub=config_data.cbc_config.hub,
+    hub_bkey= config_data.cbc_config.hub_bkey,
     pit=config_data.cbc_config.pit,
     satellites=config_data.cbc_config.satellites,
     payload=config_data.cbc_config.payload,
