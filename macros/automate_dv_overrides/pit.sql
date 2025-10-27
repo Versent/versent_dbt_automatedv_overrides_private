@@ -86,7 +86,7 @@ with
             {%- endif %}
             rows_as_of_dates.as_of_date,
             -- ghost
-            {{ hk_ghost_default()}},
+            {{ versent_dbt_automatedv_overrides_private.hk_ghost_default()}},
             cast('1900-01-01 00:00:00' as timestamp) as early_date,            
             {%- for sat in satellites %}
             {{sat}}_src.{{ satellites[sat]['pk'] }} as {{sat}}_pk,
