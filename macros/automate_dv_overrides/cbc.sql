@@ -1,17 +1,17 @@
 {% macro cbc(
     hash_key,
+    hub_bkey,
     hub,
     pit,
     satellites,
     payload,
     derivations
     ) -%}
-{%- set bkey = hash_key|replace('hk_','bk_') -%}
 with 
     hub as (
         select 
             {{hash_key}},
-            {{bkey}},
+            {{hub_bkey}},
             record_source
         from {{ ref(hub) }}
     ),
@@ -70,7 +70,7 @@ with
     get_sats as (
         select 
             hub.{{hash_key}},
-            hub.{{bkey}},
+            hub.{{hub_bkey}},
             pit.as_of_date,
             {%- for sat in satellites %}    
             -- {{sat}}
