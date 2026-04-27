@@ -1,10 +1,11 @@
-{%- macro t_link(src_pk, src_fk, src_payload, src_eff, src_ldts, src_source, source_model) -%}
+{%- macro t_link(src_pk, src_fk, src_payload, src_extra_columns, src_eff, src_ldts, src_source, source_model) -%}
 
 with t_lnk as (
-{{ automate_dv.t_link(
+{{ automate_dv.nh_link(
     src_pk=src_pk,
     src_fk=src_fk,
     src_payload=src_payload,
+    src_extra_columns=src_extra_columns,
     src_eff=src_eff,
     src_ldts=src_ldts,
     src_source=src_source,
