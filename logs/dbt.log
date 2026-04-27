@@ -1,0 +1,51 @@
+{"data":{"log_version":3,"version":"=2.0.0-preview.173"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019dcd84-d38f-7611-8387-ca1a17041a3b","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.173","name":"MainReportVersion","pid":62735,"thread":"tokio-rt-worker","ts":"2026-04-27T05:58:47.445420Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"/Users/timnapier/.local/bin/dbt license info --json --log-format json","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019dcd84-d38f-7611-8387-ca1a17041a3b","level":"debug","msg":"running dbt-fusion with argumets {\"command\":\"license\",\"vars\":\"{}\",\"limit\":\"10\",\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false}","name":"MainReportArgs","pid":62735,"thread":"tokio-rt-worker","ts":"2026-04-27T05:58:47.445431Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019dcd84-d38f-7611-8387-ca1a17041a3b","level":"info","msg":"License loaded from file /Users/timnapier/.dbt/license.36438","name":"Generic","pid":62735,"thread":"tokio-rt-worker","ts":"2026-04-27T05:58:47.449180Z"}}
+{"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"valid\",\n  \"licensing_enabled\": true,\n  \"features\": []\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019dcd84-d38f-7611-8387-ca1a17041a3b","level":"info","msg":"{\n  \"status\": \"valid\",\n  \"licensing_enabled\": true,\n  \"features\": []\n}","name":"ShowNode","pid":62735,"thread":"tokio-rt-worker","ts":"2026-04-27T05:58:47.449325Z"}}
+{"data":{"completed_at":"2026-04-27T05:58:47.602750Z","elapsed":0.15819500386714935,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019dcd84-d38f-7611-8387-ca1a17041a3b","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [158ms]","name":"CommandCompleted","pid":62735,"thread":"tokio-rt-worker","ts":"2026-04-27T05:58:47.603098Z"}}
+==================== 2026-04-27T06:00:03.500973Z | 019dcd85-fcab-7312-b013-1739b8b05c23 ====================
+06:00:03.501356 [info ]: dbt-fusion 2.0.0-preview.173
+06:00:03.624314 [info ]:    Started resolving packages from packages.yml
+06:00:03.785008 [info ]:   Finished [  0.16s] resolving packages from packages.yml (2 items)
+06:00:03.785232 [info ]: Installing packages
+06:00:03.810448 [info ]: Installing Datavault-UK/automate_dv
+06:00:04.370862 [info ]:  Installed Datavault-UK/automate_dv: 0.11.5
+06:00:04.370973 [info ]: Installing dbt-labs/dbt_utils
+06:00:04.827525 [info ]:  Installed dbt-labs/dbt_utils: 1.3.3
+06:00:04.827604 [info ]:  Installed 2 packages
+06:00:04.861420 [info ]: 
+==================== Execution Summary =====================
+Finished 'deps' successfully [1.4s]
+==================== 2026-04-27T06:05:34.269715Z | 019dcd8b-08bc-7c21-bb60-ee21fec1210d ====================
+06:05:34.269969 [info ]: dbt-fusion 2.0.0-preview.173
+06:05:34.271504 [info ]: Started loading project
+06:05:34.279101 [info ]: Finished loading project [  0.01s]
+06:05:34.279890 [error]: dbt1005: No profile specified in dbt_project.yml
+06:05:34.487897 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [218ms]
+==================== 2026-04-27T06:06:18.502660Z | 019dcd8b-b585-7903-bdea-9f51a891ccaf ====================
+06:06:18.502746 [info ]: dbt-fusion 2.0.0-preview.173
+06:06:18.502951 [info ]: Started loading project
+06:06:18.503567 [info ]: Finished loading project [  0.00s]
+06:06:18.503640 [error]: dbt1005: No profile specified in dbt_project.yml
+06:06:18.692274 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [189ms]
+==================== 2026-04-27T06:06:56.969633Z | 019dcd8c-4bc8-7eb2-9a1c-7d8cbfa3034d ====================
+06:06:56.969722 [info ]: dbt-fusion 2.0.0-preview.173
+06:06:56.969810 [info ]: Started cleaning
+06:06:56.970081 [info ]: Started loading project
+06:06:56.970872 [info ]: Finished loading project [  0.00s]
+06:06:56.971262 [info ]: Finished cleaning [  0.00s]
+06:06:57.164308 [info ]: 
+==================== Execution Summary =====================
+Finished 'clean' successfully [194ms]
+==================== 2026-04-27T06:06:59.871505Z | 019dcd8c-571e-7a60-920d-f22eb6a6f8a2 ====================
+06:06:59.871585 [info ]: dbt-fusion 2.0.0-preview.173
+06:06:59.871762 [info ]: Started loading project
+06:06:59.872449 [info ]: Finished loading project [  0.00s]
+06:06:59.872546 [error]: dbt1005: No profile specified in dbt_project.yml
+06:07:00.038714 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [167ms]
