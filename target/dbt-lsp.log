@@ -321,3 +321,502 @@
 06:05:25.076566 [info ]: Finished scheduling [  0.00s]
 06:05:25.076849 [info ]: Finished loading project [  0.20s]
 06:05:25.077998 [info ]: Cached model count updated: 0 models (accurate)
+==================== 2026-05-26T23:18:04.375132Z | ed9426de-23c2-4981-9e35-ecbc08459baa ====================
+23:18:04.375733 [info ]: Starting dbt LSP server
+23:18:04.376022 [info ]: Connecting to LSP client on port 8000
+23:18:04.376895 [info ]: Successfully connected to LSP client
+23:18:04.376905 [info ]: Creating LSP service...
+23:18:04.427868 [info ]: Creating LSP server...
+23:18:04.427897 [info ]: Starting LSP server...
+23:18:04.483050 [info ]: Loading ~/.dbt/profiles.yml
+23:18:04.739541 [info ]: Started loading project
+23:18:04.740514 [info ]: Loading ~/.dbt/profiles.yml
+23:18:04.892926 [info ]: Loading packages.yml
+23:18:04.893918 [debug]:    Started loading packages
+23:18:04.903771 [debug]:     Loaded [  0.01s] packages
+23:18:04.910931 [info ]: Started parsing
+23:18:04.974122 [info ]: Finished loading project [  0.23s]
+23:18:04.993059 [debug]: Finished parsing macros/automate_dv_overrides/__datavault_macros.yml [  0.00s]
+23:18:04.995171 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "hash_key" has unsupported type "binary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:18:04.995221 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:18:04.995227 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "payload" has unsupported type "dictionary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:18:04.995274 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "derivations" has unsupported type "dictionary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:18:04.995691 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "hash_key" has unsupported type "binary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:18:04.995709 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "load_datetime" has unsupported type "timestamp". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:18:04.995717 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:18:04.995805 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit_as_of_date": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:18:05.133098 [info ]: DOWNLOADING deferral manifest
+23:18:05.133140 [info ]: Finished parsing [  0.22s]
+23:18:08.759717 [info ]: DOWNLOADED deferral manifest to /Users/timnapier/Projects/versent_dbt_automatedv_overrides_private/target/.lsp/dbt_cloud_defer/manifest.json
+23:18:08.967249 [info ]: Cached model count updated: 0 models (estimate)
+23:18:08.967304 [info ]: Cached model count updated: 0 models (accurate)
+23:18:08.970017 [info ]: Started scheduling
+23:18:08.972791 [info ]: Finished scheduling [  0.00s]
+23:18:08.973063 [debug]: Compilation - 0 nodes selected: {}
+23:18:08.973335 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+23:18:08.973376 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:18:08.973625 [info ]: Started scheduling
+23:18:08.973634 [info ]: Finished scheduling [  0.00s]
+23:18:08.980435 [info ]: Started deferring state
+23:18:08.981074 [info ]: Finished deferring state [  0.00s]
+23:18:09.161769 [info ]: Started building task graph
+23:18:09.162996 [info ]: Finished building task graph [  0.00s]
+23:18:09.177345 [info ]: Started scheduling
+23:18:09.177364 [info ]: Finished scheduling [  0.00s]
+23:18:09.177966 [info ]: Cached model count updated: 0 models (accurate)
+23:18:10.351901 [info ]: Started loading project
+23:18:10.352230 [info ]: Loading ~/.dbt/profiles.yml
+23:18:10.373475 [info ]: Cached model count updated: 0 models (estimate)
+23:18:10.373496 [info ]: Cached model count updated: 0 models (accurate)
+23:18:10.373507 [info ]: Started scheduling
+23:18:10.373529 [info ]: Finished scheduling [  0.00s]
+23:18:10.373537 [debug]: Compilation - 0 nodes selected: {}
+23:18:10.373546 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+23:18:10.373553 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:18:10.374257 [info ]: Started deferring state
+23:18:10.374267 [info ]: Finished deferring state [  0.00s]
+23:18:10.525151 [info ]: Started building task graph
+23:18:10.525173 [info ]: Finished building task graph [  0.00s]
+23:18:10.527752 [info ]: Started scheduling
+23:18:10.527771 [info ]: Finished scheduling [  0.00s]
+23:18:10.528012 [info ]: Finished loading project [  0.18s]
+23:18:10.528907 [info ]: Cached model count updated: 0 models (accurate)
+23:18:11.706420 [info ]: Started loading project
+23:18:11.706898 [info ]: Loading ~/.dbt/profiles.yml
+23:18:11.732621 [info ]: Cached model count updated: 0 models (estimate)
+23:18:11.732643 [info ]: Cached model count updated: 0 models (accurate)
+23:18:11.732654 [info ]: Started scheduling
+23:18:11.732676 [info ]: Finished scheduling [  0.00s]
+23:18:11.732686 [debug]: Compilation - 0 nodes selected: {}
+23:18:11.732694 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:18:11.733530 [info ]: Started deferring state
+23:18:11.733543 [info ]: Finished deferring state [  0.00s]
+23:18:11.889083 [info ]: Started building task graph
+23:18:11.889106 [info ]: Finished building task graph [  0.00s]
+23:18:11.891373 [info ]: Started scheduling
+23:18:11.891395 [info ]: Finished scheduling [  0.00s]
+23:18:11.891682 [info ]: Finished loading project [  0.19s]
+23:18:11.892642 [info ]: Cached model count updated: 0 models (accurate)
+23:19:23.744898 [info ]: Started loading project
+23:19:23.745814 [info ]: Loading ~/.dbt/profiles.yml
+23:19:23.748800 [info ]: Started loading project
+23:19:23.748958 [info ]: Loading ~/.dbt/profiles.yml
+23:19:23.748981 [info ]: Finished loading project [  0.00s]
+23:19:23.886678 [info ]: Loading packages.yml
+23:19:23.886769 [debug]:    Started loading packages
+23:19:23.891948 [debug]:     Loaded [  0.01s] packages
+23:19:23.892635 [info ]: Started parsing
+23:19:23.944250 [info ]: Finished loading project [  0.20s]
+23:19:23.947692 [debug]: Finished parsing macros/automate_dv_overrides/__datavault_macros.yml [  0.00s]
+23:19:23.948368 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "hash_key" has unsupported type "binary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:19:23.948391 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:19:23.948397 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "payload" has unsupported type "dictionary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:19:23.948403 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "derivations" has unsupported type "dictionary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:19:23.948446 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "hash_key" has unsupported type "binary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:19:23.948453 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "load_datetime" has unsupported type "timestamp". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:19:23.948458 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:19:23.948474 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit_as_of_date": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:19:24.199446 [info ]: Cached model count updated: 0 models (estimate)
+23:19:24.199463 [info ]: Cached model count updated: 0 models (accurate)
+23:19:24.199489 [info ]: Started scheduling
+23:19:24.199519 [info ]: Finished scheduling [  0.00s]
+23:19:24.199528 [debug]: Compilation - 0 nodes selected: {}
+23:19:24.199540 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+23:19:24.199546 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:19:24.199552 [info ]: Started scheduling
+23:19:24.199556 [info ]: Finished scheduling [  0.00s]
+23:19:24.200353 [info ]: Started deferring state
+23:19:24.200366 [info ]: Finished deferring state [  0.00s]
+23:19:24.351594 [info ]: Started building task graph
+23:19:24.351628 [info ]: Finished building task graph [  0.00s]
+23:19:24.355528 [info ]: Started scheduling
+23:19:24.355556 [info ]: Finished scheduling [  0.00s]
+23:19:24.371353 [info ]: Cached model count updated: 0 models (accurate)
+23:19:24.371398 [info ]: Finished parsing [  0.48s]
+23:19:25.549837 [info ]: Started loading project
+23:19:25.551056 [info ]: Loading ~/.dbt/profiles.yml
+23:19:25.583354 [info ]: Cached model count updated: 0 models (estimate)
+23:19:25.583388 [info ]: Cached model count updated: 0 models (accurate)
+23:19:25.583406 [info ]: Started scheduling
+23:19:25.583440 [info ]: Finished scheduling [  0.00s]
+23:19:25.583453 [debug]: Compilation - 0 nodes selected: {}
+23:19:25.583466 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:19:25.585333 [info ]: Started deferring state
+23:19:25.585351 [info ]: Finished deferring state [  0.00s]
+23:19:25.745715 [info ]: Started building task graph
+23:19:25.745738 [info ]: Finished building task graph [  0.00s]
+23:19:25.748364 [info ]: Started scheduling
+23:19:25.748389 [info ]: Finished scheduling [  0.00s]
+23:19:25.748647 [info ]: Finished loading project [  0.20s]
+23:19:25.749759 [info ]: Cached model count updated: 0 models (accurate)
+23:19:29.365129 [info ]: Started loading project
+23:19:29.365659 [info ]: Loading ~/.dbt/profiles.yml
+23:19:29.367385 [info ]: Started loading project
+23:19:29.367550 [info ]: Loading ~/.dbt/profiles.yml
+23:19:29.367581 [info ]: Finished loading project [  0.00s]
+23:19:29.494326 [info ]: Loading packages.yml
+23:19:29.494407 [debug]:    Started loading packages
+23:19:29.497460 [debug]:     Loaded [  0.00s] packages
+23:19:29.498346 [info ]: Started parsing
+23:19:29.527634 [info ]: Finished loading project [  0.16s]
+23:19:29.530422 [debug]: Finished parsing macros/automate_dv_overrides/__datavault_macros.yml [  0.00s]
+23:19:29.531094 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "hash_key" has unsupported type "binary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:19:29.531134 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:19:29.531144 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "payload" has unsupported type "dictionary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:19:29.531150 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "derivations" has unsupported type "dictionary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:19:29.531208 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "hash_key" has unsupported type "binary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:19:29.531269 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "load_datetime" has unsupported type "timestamp". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:19:29.531303 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:19:29.531333 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit_as_of_date": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:19:29.788305 [info ]: Cached model count updated: 0 models (estimate)
+23:19:29.788322 [info ]: Cached model count updated: 0 models (accurate)
+23:19:29.788330 [info ]: Started scheduling
+23:19:29.788346 [info ]: Finished scheduling [  0.00s]
+23:19:29.788352 [debug]: Compilation - 0 nodes selected: {}
+23:19:29.788359 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+23:19:29.788364 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:19:29.788369 [info ]: Started scheduling
+23:19:29.788372 [info ]: Finished scheduling [  0.00s]
+23:19:29.789110 [info ]: Started deferring state
+23:19:29.789121 [info ]: Finished deferring state [  0.00s]
+23:19:29.954567 [info ]: Started building task graph
+23:19:29.954588 [info ]: Finished building task graph [  0.00s]
+23:19:29.956855 [info ]: Started scheduling
+23:19:29.956876 [info ]: Finished scheduling [  0.00s]
+23:19:29.963089 [info ]: Cached model count updated: 0 models (accurate)
+23:19:29.963123 [info ]: Finished parsing [  0.46s]
+23:19:31.139776 [info ]: Started loading project
+23:19:31.140344 [info ]: Loading ~/.dbt/profiles.yml
+23:19:31.166048 [info ]: Cached model count updated: 0 models (estimate)
+23:19:31.166092 [info ]: Cached model count updated: 0 models (accurate)
+23:19:31.166112 [info ]: Started scheduling
+23:19:31.166151 [info ]: Finished scheduling [  0.00s]
+23:19:31.166163 [debug]: Compilation - 0 nodes selected: {}
+23:19:31.166176 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:19:31.167499 [info ]: Started deferring state
+23:19:31.167519 [info ]: Finished deferring state [  0.00s]
+23:19:31.332585 [info ]: Started building task graph
+23:19:31.332612 [info ]: Finished building task graph [  0.00s]
+23:19:31.336052 [info ]: Started scheduling
+23:19:31.336084 [info ]: Finished scheduling [  0.00s]
+23:19:31.336375 [info ]: Finished loading project [  0.20s]
+23:19:31.337642 [info ]: Cached model count updated: 0 models (accurate)
+23:19:49.345999 [info ]: Started loading project
+23:19:49.346950 [info ]: Loading ~/.dbt/profiles.yml
+23:19:49.350703 [info ]: Started loading project
+23:19:49.350866 [info ]: Loading ~/.dbt/profiles.yml
+23:19:49.350878 [info ]: Finished loading project [  0.00s]
+23:19:49.470975 [info ]: Loading packages.yml
+23:19:49.471026 [debug]:    Started loading packages
+23:19:49.474118 [debug]:     Loaded [  0.00s] packages
+23:19:49.474673 [info ]: Started parsing
+23:19:49.529407 [info ]: Finished loading project [  0.18s]
+23:19:49.532363 [debug]: Finished parsing macros/automate_dv_overrides/__datavault_macros.yml [  0.00s]
+23:19:49.532961 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "hash_key" has unsupported type "binary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:19:49.532978 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:19:49.532984 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "payload" has unsupported type "dictionary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:19:49.532990 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "derivations" has unsupported type "dictionary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:19:49.533034 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "hash_key" has unsupported type "binary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:19:49.533040 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "load_datetime" has unsupported type "timestamp". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:19:49.533045 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:19:49.533060 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit_as_of_date": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:19:49.849842 [info ]: Cached model count updated: 0 models (estimate)
+23:19:49.849864 [info ]: Cached model count updated: 0 models (accurate)
+23:19:49.849882 [info ]: Started scheduling
+23:19:49.849898 [info ]: Finished scheduling [  0.00s]
+23:19:49.849907 [debug]: Compilation - 0 nodes selected: {}
+23:19:49.849916 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+23:19:49.849923 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:19:49.849929 [info ]: Started scheduling
+23:19:49.849934 [info ]: Finished scheduling [  0.00s]
+23:19:49.851247 [info ]: Started deferring state
+23:19:49.851257 [info ]: Finished deferring state [  0.00s]
+23:19:50.003249 [info ]: Started building task graph
+23:19:50.003270 [info ]: Finished building task graph [  0.00s]
+23:19:50.006332 [info ]: Started scheduling
+23:19:50.006349 [info ]: Finished scheduling [  0.00s]
+23:19:50.028715 [info ]: Cached model count updated: 0 models (accurate)
+23:19:50.028755 [info ]: Finished parsing [  0.55s]
+23:19:51.212614 [info ]: Started loading project
+23:19:51.214122 [info ]: Loading ~/.dbt/profiles.yml
+23:19:51.245984 [info ]: Cached model count updated: 0 models (estimate)
+23:19:51.246004 [info ]: Cached model count updated: 0 models (accurate)
+23:19:51.246014 [info ]: Started scheduling
+23:19:51.246030 [info ]: Finished scheduling [  0.00s]
+23:19:51.246037 [debug]: Compilation - 0 nodes selected: {}
+23:19:51.246046 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:19:51.246875 [info ]: Started deferring state
+23:19:51.246886 [info ]: Finished deferring state [  0.00s]
+23:19:51.405227 [info ]: Started building task graph
+23:19:51.405245 [info ]: Finished building task graph [  0.00s]
+23:19:51.407332 [info ]: Started scheduling
+23:19:51.407349 [info ]: Finished scheduling [  0.00s]
+23:19:51.407598 [info ]: Finished loading project [  0.19s]
+23:19:51.408607 [info ]: Cached model count updated: 0 models (accurate)
+23:24:11.807714 [info ]: Started loading project
+23:24:11.808658 [info ]: Loading ~/.dbt/profiles.yml
+23:24:11.811822 [info ]: Started loading project
+23:24:11.811976 [info ]: Loading ~/.dbt/profiles.yml
+23:24:11.811991 [info ]: Finished loading project [  0.00s]
+23:24:11.938016 [info ]: Loading packages.yml
+23:24:11.938086 [debug]:    Started loading packages
+23:24:11.941132 [debug]:     Loaded [  0.00s] packages
+23:24:11.941808 [info ]: Started parsing
+23:24:11.993171 [info ]: Finished loading project [  0.18s]
+23:24:11.996134 [debug]: Finished parsing macros/automate_dv_overrides/__datavault_macros.yml [  0.00s]
+23:24:11.997664 [info ]: Finished parsing [  0.06s]
+23:24:12.264585 [info ]: Cached model count updated: 0 models (estimate)
+23:24:12.264608 [info ]: Cached model count updated: 0 models (accurate)
+23:24:12.264647 [info ]: Started scheduling
+23:24:12.264676 [info ]: Finished scheduling [  0.00s]
+23:24:12.264686 [debug]: Compilation - 0 nodes selected: {}
+23:24:12.264697 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+23:24:12.264704 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:24:12.264710 [info ]: Started scheduling
+23:24:12.264714 [info ]: Finished scheduling [  0.00s]
+23:24:12.265556 [info ]: Started deferring state
+23:24:12.265572 [info ]: Finished deferring state [  0.00s]
+23:24:12.415075 [info ]: Started building task graph
+23:24:12.415103 [info ]: Finished building task graph [  0.00s]
+23:24:12.418317 [info ]: Started scheduling
+23:24:12.418336 [info ]: Finished scheduling [  0.00s]
+23:24:12.418799 [info ]: Cached model count updated: 0 models (accurate)
+23:24:13.612797 [info ]: Started loading project
+23:24:13.613536 [info ]: Loading ~/.dbt/profiles.yml
+23:24:13.637532 [info ]: Cached model count updated: 0 models (estimate)
+23:24:13.637549 [info ]: Cached model count updated: 0 models (accurate)
+23:24:13.637559 [info ]: Started scheduling
+23:24:13.637577 [info ]: Finished scheduling [  0.00s]
+23:24:13.637585 [debug]: Compilation - 0 nodes selected: {}
+23:24:13.637594 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+23:24:13.637602 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:24:13.640460 [info ]: Started deferring state
+23:24:13.640471 [info ]: Finished deferring state [  0.00s]
+23:24:13.801807 [info ]: Started building task graph
+23:24:13.801826 [info ]: Finished building task graph [  0.00s]
+23:24:13.804055 [info ]: Started scheduling
+23:24:13.804074 [info ]: Finished scheduling [  0.00s]
+23:24:13.804324 [info ]: Finished loading project [  0.19s]
+23:24:13.805232 [info ]: Cached model count updated: 0 models (accurate)
+23:24:14.980964 [info ]: Started loading project
+23:24:14.981443 [info ]: Loading ~/.dbt/profiles.yml
+23:24:15.006240 [info ]: Cached model count updated: 0 models (estimate)
+23:24:15.006258 [info ]: Cached model count updated: 0 models (accurate)
+23:24:15.006268 [info ]: Started scheduling
+23:24:15.006286 [info ]: Finished scheduling [  0.00s]
+23:24:15.006295 [debug]: Compilation - 0 nodes selected: {}
+23:24:15.006304 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:24:15.007093 [info ]: Started deferring state
+23:24:15.007103 [info ]: Finished deferring state [  0.00s]
+23:24:15.164528 [info ]: Started building task graph
+23:24:15.164552 [info ]: Finished building task graph [  0.00s]
+23:24:15.166748 [info ]: Started scheduling
+23:24:15.166766 [info ]: Finished scheduling [  0.00s]
+23:24:15.167007 [info ]: Finished loading project [  0.19s]
+23:24:15.167861 [info ]: Cached model count updated: 0 models (accurate)
+23:25:17.318582 [info ]: Started loading project
+23:25:17.319070 [info ]: Loading ~/.dbt/profiles.yml
+23:25:17.321384 [info ]: Started loading project
+23:25:17.321527 [info ]: Loading ~/.dbt/profiles.yml
+23:25:17.321544 [info ]: Finished loading project [  0.00s]
+23:25:17.452127 [info ]: Loading packages.yml
+23:25:17.452179 [debug]:    Started loading packages
+23:25:17.457000 [debug]:     Loaded [  0.00s] packages
+23:25:17.457568 [info ]: Started parsing
+23:25:17.509131 [info ]: Finished loading project [  0.19s]
+23:25:17.512955 [debug]: Finished parsing macros/automate_dv_overrides/__datavault_macros.yml [  0.00s]
+23:25:17.513727 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "hash_key" has unsupported type "binary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:25:17.513768 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:25:17.513774 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "payload" has unsupported type "dictionary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:25:17.513780 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "derivations" has unsupported type "dictionary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:25:17.513831 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "hash_key" has unsupported type "binary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:25:17.513839 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "load_datetime" has unsupported type "timestamp". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:25:17.513844 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:25:17.513865 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit_as_of_date": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:25:17.803855 [info ]: Cached model count updated: 0 models (estimate)
+23:25:17.803878 [info ]: Cached model count updated: 0 models (accurate)
+23:25:17.803901 [info ]: Started scheduling
+23:25:17.803917 [info ]: Finished scheduling [  0.00s]
+23:25:17.803923 [debug]: Compilation - 0 nodes selected: {}
+23:25:17.803932 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+23:25:17.803939 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:25:17.803945 [info ]: Started scheduling
+23:25:17.803949 [info ]: Finished scheduling [  0.00s]
+23:25:17.804799 [info ]: Started deferring state
+23:25:17.804808 [info ]: Finished deferring state [  0.00s]
+23:25:17.953926 [info ]: Started building task graph
+23:25:17.953951 [info ]: Finished building task graph [  0.00s]
+23:25:17.958621 [info ]: Started scheduling
+23:25:17.958642 [info ]: Finished scheduling [  0.00s]
+23:25:17.959088 [info ]: Cached model count updated: 0 models (accurate)
+23:25:17.959106 [info ]: Finished parsing [  0.50s]
+23:25:19.154642 [info ]: Started loading project
+23:25:19.155917 [info ]: Loading ~/.dbt/profiles.yml
+23:25:19.187210 [info ]: Cached model count updated: 0 models (estimate)
+23:25:19.187234 [info ]: Cached model count updated: 0 models (accurate)
+23:25:19.187246 [info ]: Started scheduling
+23:25:19.187265 [info ]: Finished scheduling [  0.00s]
+23:25:19.187274 [debug]: Compilation - 0 nodes selected: {}
+23:25:19.187283 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+23:25:19.187292 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:25:19.188240 [info ]: Started deferring state
+23:25:19.188251 [info ]: Finished deferring state [  0.00s]
+23:25:19.345299 [info ]: Started building task graph
+23:25:19.345324 [info ]: Finished building task graph [  0.00s]
+23:25:19.347482 [info ]: Started scheduling
+23:25:19.347501 [info ]: Finished scheduling [  0.00s]
+23:25:19.347738 [info ]: Finished loading project [  0.19s]
+23:25:19.348715 [info ]: Cached model count updated: 0 models (accurate)
+23:25:20.535352 [info ]: Started loading project
+23:25:20.536200 [info ]: Loading ~/.dbt/profiles.yml
+23:25:20.563214 [info ]: Cached model count updated: 0 models (estimate)
+23:25:20.563237 [info ]: Cached model count updated: 0 models (accurate)
+23:25:20.563247 [info ]: Started scheduling
+23:25:20.563265 [info ]: Finished scheduling [  0.00s]
+23:25:20.563273 [debug]: Compilation - 0 nodes selected: {}
+23:25:20.563281 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:25:20.564111 [info ]: Started deferring state
+23:25:20.564121 [info ]: Finished deferring state [  0.00s]
+23:25:20.720736 [info ]: Started building task graph
+23:25:20.720753 [info ]: Finished building task graph [  0.00s]
+23:25:20.722882 [info ]: Started scheduling
+23:25:20.722902 [info ]: Finished scheduling [  0.00s]
+23:25:20.723137 [info ]: Finished loading project [  0.19s]
+23:25:20.724074 [info ]: Cached model count updated: 0 models (accurate)
+23:28:40.812999 [info ]: Started loading project
+23:28:40.813914 [info ]: Loading ~/.dbt/profiles.yml
+23:28:40.817390 [info ]: Started loading project
+23:28:40.817578 [info ]: Loading ~/.dbt/profiles.yml
+23:28:40.817599 [info ]: Finished loading project [  0.00s]
+23:28:40.958672 [info ]: Loading packages.yml
+23:28:40.958807 [debug]:    Started loading packages
+23:28:40.964271 [debug]:     Loaded [  0.01s] packages
+23:28:40.965085 [info ]: Started parsing
+23:28:41.012944 [info ]: Finished loading project [  0.20s]
+23:28:41.015912 [debug]: Finished parsing macros/automate_dv_overrides/__datavault_macros.yml [  0.00s]
+23:28:41.016574 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "hash_key" has unsupported type "binary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:28:41.016602 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:28:41.016606 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "payload" has unsupported type "dictionary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:28:41.016611 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "derivations" has unsupported type "dictionary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:28:41.016655 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "hash_key" has unsupported type "binary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:28:41.016660 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:28:41.016679 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit_as_of_date": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:28:41.279889 [info ]: Cached model count updated: 0 models (estimate)
+23:28:41.279908 [info ]: Cached model count updated: 0 models (accurate)
+23:28:41.279923 [info ]: Started scheduling
+23:28:41.279937 [info ]: Finished scheduling [  0.00s]
+23:28:41.279943 [debug]: Compilation - 0 nodes selected: {}
+23:28:41.279951 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+23:28:41.279956 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:28:41.279960 [info ]: Started scheduling
+23:28:41.279963 [info ]: Finished scheduling [  0.00s]
+23:28:41.280764 [info ]: Started deferring state
+23:28:41.280774 [info ]: Finished deferring state [  0.00s]
+23:28:41.428576 [info ]: Started building task graph
+23:28:41.428598 [info ]: Finished building task graph [  0.00s]
+23:28:41.431893 [info ]: Started scheduling
+23:28:41.431911 [info ]: Finished scheduling [  0.00s]
+23:28:41.432411 [info ]: Cached model count updated: 0 models (accurate)
+23:28:41.432427 [info ]: Finished parsing [  0.47s]
+23:28:42.621009 [info ]: Started loading project
+23:28:42.622466 [info ]: Loading ~/.dbt/profiles.yml
+23:28:42.655196 [info ]: Cached model count updated: 0 models (estimate)
+23:28:42.655219 [info ]: Cached model count updated: 0 models (accurate)
+23:28:42.655229 [info ]: Started scheduling
+23:28:42.655249 [info ]: Finished scheduling [  0.00s]
+23:28:42.655257 [debug]: Compilation - 0 nodes selected: {}
+23:28:42.655266 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+23:28:42.655274 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:28:42.656030 [info ]: Started deferring state
+23:28:42.656040 [info ]: Finished deferring state [  0.00s]
+23:28:42.813606 [info ]: Started building task graph
+23:28:42.813623 [info ]: Finished building task graph [  0.00s]
+23:28:42.815802 [info ]: Started scheduling
+23:28:42.815821 [info ]: Finished scheduling [  0.00s]
+23:28:42.816058 [info ]: Finished loading project [  0.20s]
+23:28:42.817006 [info ]: Cached model count updated: 0 models (accurate)
+23:28:43.997391 [info ]: Started loading project
+23:28:43.998016 [info ]: Loading ~/.dbt/profiles.yml
+23:28:44.022091 [info ]: Cached model count updated: 0 models (estimate)
+23:28:44.022111 [info ]: Cached model count updated: 0 models (accurate)
+23:28:44.022121 [info ]: Started scheduling
+23:28:44.022139 [info ]: Finished scheduling [  0.00s]
+23:28:44.022147 [debug]: Compilation - 0 nodes selected: {}
+23:28:44.022154 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:28:44.022888 [info ]: Started deferring state
+23:28:44.022901 [info ]: Finished deferring state [  0.00s]
+23:28:44.197116 [info ]: Started building task graph
+23:28:44.197135 [info ]: Finished building task graph [  0.00s]
+23:28:44.199332 [info ]: Started scheduling
+23:28:44.199351 [info ]: Finished scheduling [  0.00s]
+23:28:44.199612 [info ]: Finished loading project [  0.20s]
+23:28:44.200570 [info ]: Cached model count updated: 0 models (accurate)
+23:29:27.738246 [info ]: Started loading project
+23:29:27.738883 [info ]: Loading ~/.dbt/profiles.yml
+23:29:27.742044 [info ]: Started loading project
+23:29:27.742199 [info ]: Loading ~/.dbt/profiles.yml
+23:29:27.742223 [info ]: Finished loading project [  0.00s]
+23:29:27.889445 [info ]: Loading packages.yml
+23:29:27.889504 [debug]:    Started loading packages
+23:29:27.894555 [debug]:     Loaded [  0.01s] packages
+23:29:27.895190 [info ]: Started parsing
+23:29:27.961603 [info ]: Finished loading project [  0.22s]
+23:29:27.964215 [debug]: Finished parsing macros/automate_dv_overrides/__datavault_macros.yml [  0.00s]
+23:29:27.964812 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "hash_key" has unsupported type "binary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:29:27.964842 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:29:27.964847 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "payload" has unsupported type "dictionary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:29:27.964851 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "derivations" has unsupported type "dictionary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:29:27.964893 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "hash_key" has unsupported type "binary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:29:27.964901 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "load_datetime" has unsupported type "timestamp". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:29:27.964905 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:29:27.964922 [warn ]: dbt1506: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit_as_of_date": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+23:29:28.246210 [info ]: Cached model count updated: 0 models (estimate)
+23:29:28.246232 [info ]: Cached model count updated: 0 models (accurate)
+23:29:28.246260 [info ]: Started scheduling
+23:29:28.246277 [info ]: Finished scheduling [  0.00s]
+23:29:28.246285 [debug]: Compilation - 0 nodes selected: {}
+23:29:28.246293 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+23:29:28.246299 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:29:28.246303 [info ]: Started scheduling
+23:29:28.246309 [info ]: Finished scheduling [  0.00s]
+23:29:28.247596 [info ]: Started deferring state
+23:29:28.247608 [info ]: Finished deferring state [  0.00s]
+23:29:28.402772 [info ]: Started building task graph
+23:29:28.402801 [info ]: Finished building task graph [  0.00s]
+23:29:28.406128 [info ]: Started scheduling
+23:29:28.406155 [info ]: Finished scheduling [  0.00s]
+23:29:28.406646 [info ]: Cached model count updated: 0 models (accurate)
+23:29:28.406665 [info ]: Finished parsing [  0.51s]
+23:29:29.593086 [info ]: Started loading project
+23:29:29.593904 [info ]: Loading ~/.dbt/profiles.yml
+23:29:29.625333 [info ]: Cached model count updated: 0 models (estimate)
+23:29:29.625359 [info ]: Cached model count updated: 0 models (accurate)
+23:29:29.625371 [info ]: Started scheduling
+23:29:29.625391 [info ]: Finished scheduling [  0.00s]
+23:29:29.625400 [debug]: Compilation - 0 nodes selected: {}
+23:29:29.625410 [warn ]: dbt1092: The selection criterion '' does not match any enabled nodes
+23:29:29.625418 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:29:29.626323 [info ]: Started deferring state
+23:29:29.626336 [info ]: Finished deferring state [  0.00s]
+23:29:29.786462 [info ]: Started building task graph
+23:29:29.786491 [info ]: Finished building task graph [  0.00s]
+23:29:29.788692 [info ]: Started scheduling
+23:29:29.788711 [info ]: Finished scheduling [  0.00s]
+23:29:29.788949 [info ]: Finished loading project [  0.20s]
+23:29:29.789881 [info ]: Cached model count updated: 0 models (accurate)
+23:29:30.960385 [info ]: Started loading project
+23:29:30.960992 [info ]: Loading ~/.dbt/profiles.yml
+23:29:30.986816 [info ]: Cached model count updated: 0 models (estimate)
+23:29:30.986851 [info ]: Cached model count updated: 0 models (accurate)
+23:29:30.986868 [info ]: Started scheduling
+23:29:30.986907 [info ]: Finished scheduling [  0.00s]
+23:29:30.986919 [debug]: Compilation - 0 nodes selected: {}
+23:29:30.986931 [warn ]: dbt1601: Nothing to do. Try checking your model configs and model specification args
+23:29:30.988305 [info ]: Started deferring state
+23:29:30.988328 [info ]: Finished deferring state [  0.00s]
+23:29:31.158969 [info ]: Started building task graph
+23:29:31.158997 [info ]: Finished building task graph [  0.00s]
+23:29:31.162076 [info ]: Started scheduling
+23:29:31.162112 [info ]: Finished scheduling [  0.00s]
+23:29:31.162410 [info ]: Finished loading project [  0.20s]
+23:29:31.163615 [info ]: Cached model count updated: 0 models (accurate)
