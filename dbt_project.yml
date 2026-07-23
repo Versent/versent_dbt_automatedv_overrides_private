@@ -2,6 +2,7 @@ name: versent_dbt_automatedv_overrides_private
 version: '1.0.0'
 config-version: 2
 require-dbt-version: ['>=1.0.1', '<2.0.0']
+profile: 'versent-snowflake'
 
 # Paths
 macro-paths: [ "macros" ]
