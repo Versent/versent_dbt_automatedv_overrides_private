@@ -58,3 +58,175 @@ Finished 'compile' with 1 error [167ms]
 {"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019e6694-b75b-7a63-a38c-aac8f3304f29","level":"debug","msg":"License cached to file for account 36438","name":"Generic","pid":16395,"thread":"tokio-rt-worker","ts":"2026-05-26T23:18:04.270339Z"}}
 {"data":{"columns":[],"is_inline":true,"node_name":"license_info","output_format":"json","preview":"{\n  \"status\": \"valid\",\n  \"licensing_enabled\": true,\n  \"features\": [\n    \"strict-static-analysis\"\n  ]\n}","unique_id":"license.info"},"info":{"category":"","code":"Q041","extra":{},"invocation_id":"019e6694-b75b-7a63-a38c-aac8f3304f29","level":"info","msg":"{\n  \"status\": \"valid\",\n  \"licensing_enabled\": true,\n  \"features\": [\n    \"strict-static-analysis\"\n  ]\n}","name":"ShowNode","pid":16395,"thread":"tokio-rt-worker","ts":"2026-05-26T23:18:04.270549Z"}}
 {"data":{"completed_at":"2026-05-26T23:18:04.304350Z","elapsed":1.4483939409255981,"success":true},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019e6694-b75b-7a63-a38c-aac8f3304f29","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'license' successfully [1.4s]","name":"CommandCompleted","pid":16395,"thread":"tokio-rt-worker","ts":"2026-05-26T23:18:04.305427Z"}}
+==================== 2026-07-22T05:13:05.654266Z | 019f883d-e573-7393-84c1-4e9c7caca653 ====================
+05:13:05.654560 [info ]: dbt-fusion 2.0.0-preview.196
+05:13:05.655082 [info ]: Started loading project
+05:13:05.656307 [info ]: Finished loading project [  0.00s]
+05:13:05.656614 [error]: [InvalidConfig (dbt1005)]: No profile specified in dbt_project.yml
+05:13:05.873441 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 error [219ms]
+==================== 2026-07-22T05:13:34.027451Z | 019f883e-544a-72e2-8b74-d38f036ca387 ====================
+05:13:34.027528 [info ]: dbt-fusion 2.0.0-preview.196
+05:13:34.027652 [info ]: Started loading project
+05:13:34.028378 [info ]: Loading ~/.dbt/profiles.yml
+05:13:34.148271 [info ]: Loading packages.yml
+05:13:34.148375 [debug]:    Started loading packages
+05:13:34.150765 [debug]:     Loaded [  0.00s] packages
+05:13:34.151173 [info ]: Finished loading project [  0.12s]
+05:13:34.152651 [info ]: Started parsing
+05:13:34.180097 [debug]: Finished parsing macros/automate_dv_overrides/__datavault_macros.yml [  0.00s]
+05:13:34.180595 [warn ]: [ValidateMacroArgs (dbt1506)]: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "hash_key" has unsupported type "binary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+05:13:34.180616 [warn ]: [ValidateMacroArgs (dbt1506)]: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+05:13:34.180624 [warn ]: [ValidateMacroArgs (dbt1506)]: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "payload" has unsupported type "dictionary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+05:13:34.180630 [warn ]: [ValidateMacroArgs (dbt1506)]: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "derivations" has unsupported type "dictionary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+05:13:34.180672 [warn ]: [ValidateMacroArgs (dbt1506)]: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "hash_key" has unsupported type "binary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+05:13:34.180679 [warn ]: [ValidateMacroArgs (dbt1506)]: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "load_datetime" has unsupported type "timestamp". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+05:13:34.180685 [warn ]: [ValidateMacroArgs (dbt1506)]: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+05:13:34.180699 [warn ]: [ValidateMacroArgs (dbt1506)]: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit_as_of_date": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+05:13:34.181288 [info ]: Finished parsing [  0.03s]
+05:13:34.329289 [info ]: DOWNLOADING deferral manifest
+05:13:38.692120 [info ]: DOWNLOADED deferral manifest to /Users/timnapier/Projects/versent_dbt_automatedv_overrides_private/target/dbt_cloud_defer/manifest.json
+05:13:38.823846 [info ]: Started scheduling
+05:13:38.823909 [info ]: Finished scheduling [  0.00s]
+05:13:38.823936 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+05:13:38.825026 [info ]: Started deferring state
+05:13:38.825056 [info ]: Finished deferring state [  0.00s]
+05:13:38.924898 [debug]: License loaded from file /Users/timnapier/.dbt/license.36438
+05:13:38.985038 [info ]: Started building task graph
+05:13:38.985086 [info ]: Finished building task graph [  0.00s]
+05:13:39.012816 [info ]: New version available 2.0.0-preview.200 (run `dbt system update`)
+05:13:39.046057 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 9 warnings for target 'dev' [5.0s]
+==================== 2026-07-22T05:14:26.312054Z | 019f883f-2086-7620-a3d1-0e80853a8bfc ====================
+05:14:26.312126 [info ]: dbt-fusion 2.0.0-preview.196
+05:14:26.312251 [info ]: Started loading project
+05:14:26.312964 [info ]: Loading ~/.dbt/profiles.yml
+05:14:26.434405 [info ]: Loading packages.yml
+05:14:26.434520 [debug]:    Started loading packages
+05:14:26.437673 [debug]:     Loaded [  0.00s] packages
+05:14:26.438063 [info ]: Finished loading project [  0.13s]
+05:14:26.438471 [info ]: Started parsing
+05:14:26.482344 [debug]: Finished parsing macros/automate_dv_overrides/__datavault_macros.yml [  0.00s]
+05:14:26.483029 [warn ]: [ValidateMacroArgs (dbt1506)]: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "hash_key" has unsupported type "binary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+05:14:26.483057 [warn ]: [ValidateMacroArgs (dbt1506)]: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+05:14:26.483064 [warn ]: [ValidateMacroArgs (dbt1506)]: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "payload" has unsupported type "dictionary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+05:14:26.483069 [warn ]: [ValidateMacroArgs (dbt1506)]: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "derivations" has unsupported type "dictionary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+05:14:26.483119 [warn ]: [ValidateMacroArgs (dbt1506)]: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "load_datetime" has unsupported type "timestamp". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+05:14:26.483126 [warn ]: [ValidateMacroArgs (dbt1506)]: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+05:14:26.483143 [warn ]: [ValidateMacroArgs (dbt1506)]: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit_as_of_date": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+05:14:26.483782 [info ]: Finished parsing [  0.05s]
+05:14:26.786518 [info ]: Started scheduling
+05:14:26.786580 [info ]: Finished scheduling [  0.00s]
+05:14:26.786607 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+05:14:26.787505 [info ]: Started deferring state
+05:14:26.787535 [info ]: Finished deferring state [  0.00s]
+05:14:26.885853 [debug]: License loaded from file /Users/timnapier/.dbt/license.36438
+05:14:26.944910 [info ]: Started building task graph
+05:14:26.944958 [info ]: Finished building task graph [  0.00s]
+05:14:27.470797 [info ]: New version available 2.0.0-preview.200 (run `dbt system update`)
+05:14:27.555066 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 8 warnings for target 'dev' [1.2s]
+==================== 2026-07-22T05:15:02.464619Z | 019f883f-adbe-7400-92af-73640f59a5a8 ====================
+05:15:02.465029 [info ]: dbt-fusion 2.0.0-preview.196
+05:15:02.465489 [info ]: Started loading project
+05:15:02.466341 [info ]: Loading ~/.dbt/profiles.yml
+05:15:02.600086 [info ]: Loading packages.yml
+05:15:02.600200 [debug]:    Started loading packages
+05:15:02.603528 [debug]:     Loaded [  0.00s] packages
+05:15:02.603957 [info ]: Finished loading project [  0.14s]
+05:15:02.604415 [info ]: Started parsing
+05:15:02.650572 [debug]: Finished parsing macros/automate_dv_overrides/__datavault_macros.yml [  0.00s]
+05:15:02.651088 [warn ]: [ValidateMacroArgs (dbt1506)]: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+05:15:02.651114 [warn ]: [ValidateMacroArgs (dbt1506)]: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "payload" has unsupported type "dictionary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+05:15:02.651119 [warn ]: [ValidateMacroArgs (dbt1506)]: macros/automate_dv_overrides/__datavault_macros.yml: Macro "cbc": argument "derivations" has unsupported type "dictionary". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+05:15:02.651161 [warn ]: [ValidateMacroArgs (dbt1506)]: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "load_datetime" has unsupported type "timestamp". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+05:15:02.651167 [warn ]: [ValidateMacroArgs (dbt1506)]: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+05:15:02.651181 [warn ]: [ValidateMacroArgs (dbt1506)]: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit_as_of_date": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+05:15:02.651798 [info ]: Finished parsing [  0.05s]
+05:15:02.954509 [info ]: Started scheduling
+05:15:02.954577 [info ]: Finished scheduling [  0.00s]
+05:15:02.954611 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+05:15:02.955729 [info ]: Started deferring state
+05:15:02.955767 [info ]: Finished deferring state [  0.00s]
+05:15:03.128033 [debug]: License loaded from file /Users/timnapier/.dbt/license.36438
+05:15:03.198367 [info ]: Started building task graph
+05:15:03.198433 [info ]: Finished building task graph [  0.00s]
+05:15:03.735209 [info ]: New version available 2.0.0-preview.200 (run `dbt system update`)
+05:15:03.764280 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 7 warnings for target 'dev' [1.3s]
+==================== 2026-07-22T05:18:58.292909Z | 019f8843-46f4-7e83-b3fc-0573144c9b77 ====================
+05:18:58.292974 [info ]: dbt-fusion 2.0.0-preview.196
+05:18:58.293077 [info ]: Started loading project
+05:18:58.293703 [info ]: Loading ~/.dbt/profiles.yml
+05:18:58.413954 [info ]: Loading packages.yml
+05:18:58.414057 [debug]:    Started loading packages
+05:18:58.416548 [debug]:     Loaded [  0.00s] packages
+05:18:58.416917 [info ]: Finished loading project [  0.12s]
+05:18:58.418419 [info ]: Started parsing
+05:18:58.446889 [debug]: Finished parsing macros/automate_dv_overrides/__datavault_macros.yml [  0.00s]
+05:18:58.447390 [warn ]: [ValidateMacroArgs (dbt1506)]: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit": argument "load_datetime" has unsupported type "timestamp". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+05:18:58.447424 [warn ]: [ValidateMacroArgs (dbt1506)]: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit_as_of_date": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+05:18:58.448004 [info ]: Finished parsing [  0.03s]
+05:18:58.728385 [info ]: Started scheduling
+05:18:58.728453 [info ]: Finished scheduling [  0.00s]
+05:18:58.728488 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+05:18:58.729661 [info ]: Started deferring state
+05:18:58.729691 [info ]: Finished deferring state [  0.00s]
+05:18:58.828650 [debug]: License loaded from file /Users/timnapier/.dbt/license.36438
+05:18:58.888351 [info ]: Started building task graph
+05:18:58.888405 [info ]: Finished building task graph [  0.00s]
+05:18:59.481395 [info ]: New version available 2.0.0-preview.200 (run `dbt system update`)
+05:18:59.512719 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 3 warnings for target 'dev' [1.2s]
+==================== 2026-07-22T05:20:17.279147Z | 019f8844-7b7e-7293-9f82-aa8262841389 ====================
+05:20:17.279211 [info ]: dbt-fusion 2.0.0-preview.196
+05:20:17.279314 [info ]: Started loading project
+05:20:17.279925 [info ]: Loading ~/.dbt/profiles.yml
+05:20:17.403829 [info ]: Loading packages.yml
+05:20:17.403929 [debug]:    Started loading packages
+05:20:17.406955 [debug]:     Loaded [  0.00s] packages
+05:20:17.407343 [info ]: Finished loading project [  0.13s]
+05:20:17.407745 [info ]: Started parsing
+05:20:17.450455 [debug]: Finished parsing macros/automate_dv_overrides/__datavault_macros.yml [  0.00s]
+05:20:17.450995 [warn ]: [ValidateMacroArgs (dbt1506)]: macros/automate_dv_overrides/__datavault_macros.yml: Macro "pit_as_of_date": argument "satellites" has unsupported type "array". Supported types are: string, str, boolean, bool, integer, int, float, any, relation, column, list[T], dict[K,V], optional[T], T1|T2|...
+05:20:17.451668 [info ]: Finished parsing [  0.04s]
+05:20:17.732277 [info ]: Started scheduling
+05:20:17.732344 [info ]: Finished scheduling [  0.00s]
+05:20:17.732376 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+05:20:17.733344 [info ]: Started deferring state
+05:20:17.733378 [info ]: Finished deferring state [  0.00s]
+05:20:17.832484 [debug]: License loaded from file /Users/timnapier/.dbt/license.36438
+05:20:17.891427 [info ]: Started building task graph
+05:20:17.891472 [info ]: Finished building task graph [  0.00s]
+05:20:18.390068 [info ]: New version available 2.0.0-preview.200 (run `dbt system update`)
+05:20:18.419821 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 2 warnings for target 'dev' [1.1s]
+==================== 2026-07-22T05:20:44.352727Z | 019f8844-e53f-7ad3-a91c-e05acb1b296c ====================
+05:20:44.352788 [info ]: dbt-fusion 2.0.0-preview.196
+05:20:44.352907 [info ]: Started loading project
+05:20:44.353631 [info ]: Loading ~/.dbt/profiles.yml
+05:20:44.495061 [info ]: Loading packages.yml
+05:20:44.495168 [debug]:    Started loading packages
+05:20:44.498341 [debug]:     Loaded [  0.00s] packages
+05:20:44.498718 [info ]: Finished loading project [  0.15s]
+05:20:44.499150 [info ]: Started parsing
+05:20:44.540185 [debug]: Finished parsing macros/automate_dv_overrides/__datavault_macros.yml [  0.00s]
+05:20:44.543943 [info ]: Finished parsing [  0.04s]
+05:20:44.832963 [info ]: Started scheduling
+05:20:44.833025 [info ]: Finished scheduling [  0.00s]
+05:20:44.833060 [warn ]: [NoNodesSelected (dbt1601)]: Nothing to do. Try checking your model configs and model specification args
+05:20:44.833973 [info ]: Started deferring state
+05:20:44.834009 [info ]: Finished deferring state [  0.00s]
+05:20:44.933598 [debug]: License loaded from file /Users/timnapier/.dbt/license.36438
+05:20:44.992425 [info ]: Started building task graph
+05:20:44.992470 [info ]: Finished building task graph [  0.00s]
+05:20:45.448988 [info ]: New version available 2.0.0-preview.200 (run `dbt system update`)
+05:20:45.479110 [info ]: 
+==================== Execution Summary =====================
+Finished 'compile' with 1 warning for target 'dev' [1.1s]

@@ -1,0 +1,10 @@
+target/manifest.json
+target/dbt-lsp.log
+target/run_results.json
+target/semantic_manifest.json
+target/.lsp/dbt_cloud_defer/manifest.info
+target/.lsp/dbt_cloud_defer/manifest.info
+target/.lsp/dbt_cloud_defer/manifest.info
+target/.lsp/dbt_cloud_defer/manifest.json
+logs/dbt.log
+dbt_internal_packages/

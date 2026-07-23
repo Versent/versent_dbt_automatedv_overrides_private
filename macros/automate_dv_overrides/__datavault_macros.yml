@@ -6,29 +6,27 @@ macros:
       This macro brings together hubs pits and satellites to create a consolidated model of Core Business Concepts (CBC)
     arguments:
       - name: hash_key
-        type: binary
         description: the hash key
       - name: hub
-        type: string
+
         description: Is used to create a reference to the hub of the cbc
       - name: pit
-        type: string
+
         description: Is used to create a reference to a point in time (PIT) view of the hub and satellites of the cbc
       - name: satellites
-        type: array
+
         description: a list of satellites to be joined, to the pit. will be joined by the hash key and load_date time between the pit and the satellites(s)
       - name: payload
-        type: dictionary
+
         description: list of keys values etc that describes what is required from each satellite
       - name: derivations
-        type: dictionary
+
         description: transformations performed on the items from the payload
   - name: pit_as_of_date
     description: >
       This macro captures all historical "as-of" dates for records from the associated satellite tables.
     arguments:
       - name: satellites
-        type: array
         description: a list of satellites where we get "as-of" dates for a record.
   - name: pit
     description: >
@@ -45,7 +43,7 @@ macros:
         type: string
         description: used to create a reference to the hub
       - name: hash_key
-        type: binary
+        type: string
         description: the hash key 
       - name: business_key
         type: string
@@ -64,10 +62,10 @@ macros:
         type: string
         description: (Optional) Where the data came from     
       - name: load_datetime
-        type: timestamp
+        type: string
         description: (Optional) Date time when the record was loaded  
       - name: satellites
-        type: array
+        type: list[string]
         description: a list of satellites where we get "as-of" dates for a record.
 
   - name: sat
